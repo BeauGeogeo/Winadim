@@ -150,3 +150,16 @@ Unit tests are in the `tests/` folder and use `pytest`
 Screenshots are available in handscreenshots folder for you 
 to validate game state detection. Just change the path used
 inside `tests.py`
+
+## 🚀 Future Directions
+
+In addition to the planned features mentioned above, recent research has shown that **fine-tuning a large language model (LLM)** can significantly enhance its performance as a poker assistant.
+
+💡 Instead of relying on ChatGPT, a dedicated LLM could be trained on poker-specific data to better understand in-game situations and deliver more reliable and context-aware recommendations.
+
+📄 This idea is supported by the findings in the paper [*Playing Texas Hold'em Poker with a Fine-tuned Language Model*](https://arxiv.org/abs/2401.06781), which demonstrates how domain-specific fine-tuning can greatly improve the quality of move suggestions and strategic awareness.
+
+🔁 An alternative — possibly easier to implement and even more robust — would be to use all the information computed about the current poker table state **not to query an LLM**, but to plug directly into a **solver** designed to return **game-theoretic optimal decisions**.  
+Such a solution would prioritize correctness and exploitability minimization over natural language reasoning.
+
+✨ These two directions — fine-tuned LLMs and solver-based reasoning — open the door to a more powerful and reliable poker assistant.
