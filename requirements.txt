@@ -1,0 +1,9 @@
+easyocr==1.7.2
+numpy==2.2.5
+openai==1.78.1
+opencv-python==4.11.0.86
+Pillow==11.2.1
+pyautogui==0.9.54
+pynput==1.8.1
+PyQt5==5.15.11
+PyQt5_sip==12.17.0
