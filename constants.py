@@ -2,7 +2,7 @@ import numpy
 from pathlib import Path
 
 _THIS_DIR = Path(__file__).resolve().parent
-CONSTANTS_DIR = _THIS_DIR.parent / "localonly21042025/constants_data"
+CONSTANTS_DIR = _THIS_DIR / "constants_data"
 
 # Load .npy files
 _CARD_RANK_MASKS = numpy.load(CONSTANTS_DIR / "card_rank_masks.npy", allow_pickle=False)

@@ -4,7 +4,6 @@ import numpy
 import cv2
 from dataclasses import dataclass, field
 from typing import ClassVar, Literal, Optional
-from openai import OpenAI
 from easyocr import Reader
 from constants import _CARD_RANK_MASKS, _CARD_SYMBOL_MASKS, _RANK_INDICES_MAPPING, _SYMBOL_INDICES_MAPPING
 from image_processing import find_best_match, to_ink_mask, apply_diagonal_mask_top_left

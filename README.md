@@ -21,6 +21,10 @@
   This application **requires a GPU** to function properly.  
   Components like OCR (EasyOCR) and some image processing steps are GPU-accelerated, and may **not work at all** or will be extremely slow on CPU-only systems.  
 
+  You can still remove the imports related to torch and torchvision in the `requirements.txt` but you'll need them to use the GPU. 
+
+  You can also change cuda distribution (see torch official website) to install based on your current device.
+
 - 🌐 **Instruction Language**  
   By default, the initial GPT instruction (defined in `main_gui.py`) asks the assistant to answer **in French**.  
   You can change this prompt to English (or any language you prefer) by modifying the instruction string.
@@ -30,6 +34,14 @@
   If you'd like faster results and are okay with just the move recommendation (without the reasoning being explained), 
   you can remove that part of the instruction.  
   This will significantly reduce response time at the cost of interpretability.
+
+- 🔎 **Performance and relaibility**
+  While fun and intuitive, asking chatGPT about the move to do does not guarantee great performance.
+  He is no expert and can be wrong and misleading more than once so keep being cautious. 
+  Further discussion in the Future Directions section.
+
+  Stay cautious and informed during gameplay.  
+  Further discussion can be found in the **Future Directions** section.
 
 → Support for cpu-only usage and offering language and explanation options in the GUI are planned features.
 
@@ -87,6 +99,15 @@ Open the file gpt_interface.py and replace the placeholder string with your own 
 ```python
 # === OpenAI API ===
 _OPENAI_KEY = 'my_openai_key'  # 🔁 Replace this with your actual OpenAI key
+```
+
+### 🟢 4. Run the App
+
+From the `Winadim` folder, launch the GUI:
+
+```bash
+cd Winadim
+python main_gui.py
 ```
 
 ## Project Structure
